@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamsini Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <!--Google Tag*/-->
+  <script src="https://www.googletagmaager.com/gtag/js?id=AW-1723638866"></script>
+  <script>
+    window.dataLayer=window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-1723638866');
+  </script>
+    </head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919494557422" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header with Glass Effect -->
+    <header class="header glass-effect">
+       <!-- Logo -->
+<div style="display: flex; align-items: center;">
+    <a href="/">
+        <img src="/logo.png" alt="Hamsini Tech Solutions Logo" style="height: 120px; margin-right: 15px; width: auto;">
+    </a>
+</div>
+<nav class="nav">
+    <a href="/blogs" class="nav-link">Blogs</a>
+    <a href="/newBatches" class="nav-link">New Batches</a>
+    <a href="/hire" class="nav-link">Hire From Us</a>
+</nav>
+
+<div class="contact-info">
+    <div class="contact-item">
+        <i class="fas fa-phone-alt contact-icon"></i>
+        <a href="https://wa.me/919494557422" target="_blank"><b>+91 9494557422</b></a>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-envelope contact-icon"></i>
+        <a href="hamsinitech@gmail.com"><b>hamsinitech@gmail.com</b></a>
+    </div>
+</div>
+ </header>
+ 
+    <div class="social-sidebar">
+  <!-- Background Image (will cover left side) -->
+  <div class="sidebar-bg"></div>
+  
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com/share/1DnsTNzDye/" class="social-link facebook" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com/" class="social-link twitter" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/hamsinitechsolutions?igsh=NHc5dW00ZjBnYnpm" class="social-link instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/hamsini-tech-solutions-963bbb378/" class="social-link linkedin" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <button class="social-link whatsapp" onclick="openShare('whatsapp')">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+  </div>
+</div>
+
+    <!-- Hero Section -->
+
+     <section class="hero glass-effect">
+        <h1 class="hero-title">Transform Your Career with Cutting-Edge Tech Training</h1>
+        <p class="hero-subtitle">Join India's leading technology training institute with 100% placement assistance and learn from industry experts</p>
+        <div class="hero-cta">
+            <button class="btn btn-primary" onclick="openEnrollModal('General Inquiry')">
+            <i class="fas fa-book-open"></i> Explore Courses
+            </button>
+            <button class="btn btn-outline" onclick="openWhatsApp()">
+                <i class="fas fa-phone-alt"></i> Talk to Counselor
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Courses Section -->
+        <section class="section-container glass-effect">
+            <div class="section-header">
+                <h2 class="section-title">Our Popular Courses</h2>
+                <p class="section-subtitle">Choose from our industry-relevant courses designed to make you job-ready</p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- AWS & DevOps -->
+                <div class="course-card"  onclick="openCoursePage(event, '/awsDevops')">
+                     
+                    <div class="course-badge">Popular</div>
+                    <div class="course-image-container">
+                        <img src="/devop.jpeg" alt="AWS & DevOps" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">AWS & DevOps</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Manikanta</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 10 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('AWS & DevOps')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure DevOps -->
+                <div class="course-card" onclick="openCoursePage(event, '/azureDevops')">
+                
+                    <div class="course-image-container">
+                        <img src="/azure.jpeg" alt="Azure DevOps" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Azure DevOps</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Manikanta</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Azure DevOps')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Java Full Stack -->
+                <div class="course-card" onclick="openCoursePage(event, '/java')">
+                    
+                    <div class="course-badge">New</div>
+                    <div class="course-image-container">
+                        <img src="/java.jpg" alt="Java Full Stack" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Java Full Stack</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr.Uday</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Java Full Stack')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- React JS -->
+                <div class="course-card" onclick="openCoursePage(event, '/react')">
+                    
+                    <div class="course-image-container">
+                        <img src="/react.png" alt="React.Js" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">React.Js</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Uday</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('React.Js')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generative AI -->
+                <div class="course-card" onclick="openCoursePage(event, '/gen')">
+                    
+                    <div class="course-badge">Trending</div>
+                    <div class="course-image-container">
+                        <img src="/genAI.jpeg" alt="Generative AI" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Generative AI</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Hemanth</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Generative AI')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics -->
+                <div class="course-card" onclick="openCoursePage(event, '/dataAnalytics')">
+                    
+                    <div class="course-image-container">
+                        <img src="/DA.jpeg" alt="Data Analytics" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Analytics</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Real-Time Expert</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 5 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Data Analytics')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="course-card" onclick="openCoursePage(event, '/dataScience')">
+                    
+                    <div class="course-badge">Advanced</div>
+                    <div class="course-image-container">
+                        <img src="/DS.jpeg" alt="Data Science" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Science</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Rahul</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 15 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Data Science')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power BI -->
+                <div class="course-card" onclick="openCoursePage(event, '/powerBi')">
+                    
+                    <div class="course-image-container">
+                        <img src="/pbi.png" alt="Power BI" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Power BI</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Ms. Kavitha</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 8 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Power BI')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-container glass-effect">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Hamsini Tech?</h2>
+                <p class="section-subtitle">We provide the best learning experience to transform your career</p>
+            </div>
+
+            
+            <div class="features-grid">
+                <a href="/online" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="feature-title">Online Training</h3>
+                    <p class="feature-description">
+                        Live interactive sessions with industry experts from the comfort of your home
+                    </p>
+                </div>
+            </a>
+
+                <a href="/offline" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="feature-title">Classroom Training</h3>
+                    <p class="feature-description">
+                        State-of-the-art classrooms with hands-on practical sessions
+                    </p>
+                </div>
+            </a>
+
+                <a href="/assistance" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-title">Job Assistance</h3>
+                    <p class="feature-description">
+                        100% placement support with resume building and mock interviews
+                    </p>
+                </div>
+            </a>
+
+                <a href="/certification" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="feature-title">Certification</h3>
+                    <p class="feature-description">
+                        Industry-recognized certifications to boost your career prospects
+                    </p>
+                </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials glass-effect">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">What our students say about us</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        The AWS DevOps course at Hamsini Tech transformed my career. The instructors are industry experts who provided practical knowledge. I got placed in a top MNC with a 300% salary hike!
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>AWS DevOps Engineer, TCS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        The Data Science program was comprehensive and up-to-date with industry trends. The placement team helped me secure a job even before course completion. Highly recommended!
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Data Scientist, Amazon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">
+                        The Java Full Stack course gave me the confidence to switch from non-tech to tech role. The hands-on projects were especially valuable during interviews. Thank you Hamsini Tech!
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikram Singh" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Vikram Singh</h4>
+                            <p>Full Stack Developer, Infosys</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section glass-effect">
+            <h2 class="cta-title">Ready to Transform Your Career?</h2>
+            <p class="cta-subtitle">Join our next batch and take the first step towards your dream tech job</p>
+            <button class="btn btn-primary" onclick="openEnrollModal('General Inquiry')">
+                <i class="fas fa-phone-alt"></i> Talk to Admission Counselor
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-dark">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="/logos.jpg" alt="Hamsini Tech Solutions Logo" style="height: 100px; margin-right: 15px; width: auto;">
+
+                </div>
+                <p class="footer-about">
+                    Hamsini Tech Solutions is a premier IT training institute providing industry-relevant courses with 100% placement assistance. We bridge the gap between education and employment.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1DnsTNzDye/" class="social-link" target="_blank" style="color: #0954d6;">
+                        <i class="fab fa-facebook-f" ></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-link" target="_blank" style="color: #0077b5;">
+                        <i class="fab fa-twitter" ></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hamsini-tech-solutions-963bbb378/" class="social-link" target="_blank" style="color: #3b5998;">
+                        <i class="fab fa-linkedin-in" ></i>
+                    </a>
+                    <a href="https://www.instagram.com/hamsinitechsolutions?igsh=NHc5dW00ZjBnYnpm" class="social-link" target="_blank" style="color: red;">
+                        <i class="fab fa-instagram" ></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="/index">Home</a></li>
+                    <li class="footer-link"><a href="/about">About Us</a></li>
+                    <li class="footer-link"><a href="/newBatches">New Batches</a></li>
+                    <li class="footer-link"><a href="/blogs">Blog</a></li>
+                    <li class="footer-link"><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Courses</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="/fullStack">Full Stack Development</a></li>
+                    <li class="footer-link"><a href="/awsDevops">AWS & DevOps</a></li>
+                    <li class="footer-link"><a href="/dataScience">Data Science</a></li>
+                    <li class="footer-link"><a href="/dataAnalytics">Data Analytics</a></li>
+                    <li class="footer-link"><a href="/gen">Gen AI</a></li>
+                    <li class="footer-link"><a href="/powerBi">Power BI</a></li>
+                    <li class="footer-link"><a href="/java">Java</a></li>
+                    <li class="footer-link"><a href="/azureDevops">Azure Devops</a></li>
+                    <li class="footer-link"><a href="/react">ReactJS</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Contact Us</h3>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+                    <span>Flat no:502,Annapoorna Block,Aditya Enclave,Ameerpet, Hyderabad, Telangana 500085</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt footer-contact-icon"></i>
+                    <span>+91 9494557422</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope footer-contact-icon"></i>
+                    <span>hamsinitech@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-clock footer-contact-icon"></i>
+                    <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hamsini Tech Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Enroll Modal -->
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Enroll Now</h3>
+                <span class="modal-close" onclick="closeEnrollModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Course</label>
+                    <input type="text" id="courseName" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" id="enrollName" class="form-control" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mobile Number</label>
+                    <input type="number" id="enrollMobile" class="form-control" placeholder="Enter your mobile number">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="enrollEmail" class="form-control" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Batch</label>
+                    <select class="form-control">
+                        <option>Morning (9AM - 12PM)</option>
+                        <option>Afternoon (2PM - 5PM)</option>
+                        <option>Evening (6PM - 9PM)</option>
+                        <option>Weekend (Sat & Sun)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeEnrollModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="submitEnrollForm()">Submit Application</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Share This Course</h3>
+                <span class="modal-close" onclick="closeShareModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Share Link</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" id="shareUrl" class="form-control" value="https://hamsini.com/courses" readonly>
+                        <button class="btn btn-primary" onclick="copyLink()">Copy</button>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <p style="text-align: center; margin-bottom: 1rem; color: var(--gray-700);">Or share via</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem;">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1DnsTNzDye/" class="social-link facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="social-link twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hamsinitechsolutions?igsh=NHc5dW00ZjBnYnpm" class="social-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/hamsini-tech-solutions-963bbb378/" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <button class="social-link whatsapp" onclick="openShare('whatsapp')">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+    </body>
+    </html>
+    

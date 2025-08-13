@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>Gen AI</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="/gen.css">
+    </head>
+    <body>
+    <!-- Header -->
+  <header>
+    <div><strong>Hamsini Tech Solutions</strong></div>
+    <div>
+      <a href="/">Home</a>
+      <a href="/blogs">Blogs</a>
+      <a href="/newBatches">New Batches</a>
+      <a href="/hire">Hire From Us</a>
+    </div>
+  </header>
+        <!-- Generative AI -->
+                <div class="course-card">
+                    <div class="course-badge">Trending</div>
+                    <div class="course-image-container">
+                        <img src="/genAI.jpeg" alt="Generative AI" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Generative AI</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Hemanth</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Generative AI')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+
+<div class="course-points">
+  <h2>Generative AI Course Highlights</h2>
+  <ul>
+    <li>Understanding Gen AI, LLMs, and ChatGPT</li>
+    <li>Hands-on with OpenAI API, LangChain & Vector DB</li>
+    <li>Fine-tuning and prompt engineering techniques</li>
+    <li>Building chatbots, content generators, and copilots</li>
+    <li>Ethics, biases, and responsible AI usage</li>
+    <li>Real-world Gen AI applications and use-cases</li>
+    <li>Portfolio projects and resume building</li>
+    <li>Career guidance and mock interview prep</li>
+  </ul>
+</div>
+   
+   <!-- Enroll Modal -->
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Enroll Now</h3>
+                <span class="modal-close" onclick="closeEnrollModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Course</label>
+                    <input type="text" id="courseName" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" id="enrollName" class="form-control" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mobile Number</label>
+                    <input type="number" id="enrollMobile" class="form-control" placeholder="Enter your mobile number">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="enrollEmail" class="form-control" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Batch</label>
+                    <select class="form-control">
+                        <option>Morning (9AM - 12PM)</option>
+                        <option>Afternoon (2PM - 5PM)</option>
+                        <option>Evening (6PM - 9PM)</option>
+                        <option>Weekend (Sat & Sun)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeEnrollModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="submitEnrollForm()">Submit Application</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Share This Course</h3>
+                <span class="modal-close" onclick="closeShareModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Share Link</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" id="shareUrl" class="form-control" value="https://hamsini.com/courses" readonly>
+                        <button class="btn btn-primary" onclick="copyLink()">Copy</button>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <p style="text-align: center; margin-bottom: 1rem; color: var(--gray-700);">Or share via</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem;">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1DnsTNzDye/" class="social-link facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="social-link twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hamsinitechsolutions?igsh=NHc5dW00ZjBnYnpm" class="social-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/hamsini-tech-solutions-963bbb378/" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <button class="social-link whatsapp" onclick="openShare('whatsapp')">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="/gen.js"></script>   
+</body>
+</html>     

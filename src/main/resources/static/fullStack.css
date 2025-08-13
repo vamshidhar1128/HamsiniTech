@@ -1,0 +1,441 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .glass-container {
+      min-height: 100vh;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 1300px;
+      margin: auto;
+    }
+
+   header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #00cfff;
+    }
+
+    .header-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    h2 {
+      color: #fff;
+      margin: 30px 0 10px 0;
+      font-size: 28px;
+    }
+
+
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+}
+
+/* Viewport */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Track of Cards */
+.carousel-track {
+  display: flex;
+  gap: 20px; /* spacing between cards */
+  transition: transform 0.5s ease;
+}
+
+/* Each Course Card */
+.course-card {
+  flex: 0 0 calc((100% - 60px) / 4);
+  height: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Image */
+.card-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+
+.card-body {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+/* Footer */
+.card-footer {
+      display: flex;
+      border-top: 1px solid #eee;
+    }
+
+    .enroll-btn, .share-btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .enroll-btn {
+      background-color: #0156ff;
+      color: white;
+    }
+
+    .share-btn {
+      background-color: white;
+      color: #222;
+      border-left: 1px solid #eee;
+    }
+     
+    /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+              background: rgba(255, 255, 255, 0.15);
+              backdrop-filter: blur(12px);
+              -webkit-backdrop-filter: blur(12px);
+               border-radius: var(--rounded-lg);
+               width: 90%;
+               max-width: 500px;
+               box-shadow: var(--shadow-xl);
+               overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+            color: var(--secondary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--rounded-sm);
+            border: 1px solid var(--gray-200);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .header {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-info {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                margin: 1rem;
+                padding: 3rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .whatsapp-button {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.75rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+        }
+        .logo img {
+    mix-blend-mode: multiply;
+    background: transparent;
+}
+/* Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .course-card {
+    flex: 0 0 calc((100% - 20px) / 2); /* 2 cards with 20px gap */
+  }
+}
+
+@media (max-width: 600px) {
+  .course-card {
+    flex: 0 0 100%;
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+}
+/* Generic Button */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--rounded-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: blue;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Icon Button */
+.btn-icon {
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-icon:hover {
+  opacity: 0.8;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* size of the circle */
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px; /* icon size */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Background colors for each platform */
+.social-link.facebook { background-color: #3b5998; }
+.social-link.twitter { background-color: #1da1f2; }
+.social-link.instagram { background-color: #e4405f; }
+.social-link.linkedin { background-color: #0077b5; }
+.social-link.whatsapp { background-color: #25d366; border: none; cursor: pointer; }

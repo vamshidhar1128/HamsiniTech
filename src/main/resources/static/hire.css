@@ -1,0 +1,112 @@
+/* Background Image */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Glassmorphism Header */
+header {
+  background: rgba(0, 11, 36, 0.4);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: #00b7ff;
+}
+
+/* Glassmorphism Hire Section */
+.hire {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hire h1 {
+  font-size: 28px;
+  color: #00e5ff;
+  margin-bottom: 20px;
+}
+
+.hire h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.hire p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.hire ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.hire ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* Drop a Query Button */
+.btn-query {
+  margin-top: 15px;
+  background: linear-gradient(to right, #5f2c82, #49a09d);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.btn-query:hover {
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  transform: scale(1.03);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .hire {
+    padding: 20px 15px;
+  }
+  .hire h1 {
+    font-size: 22px;
+  }
+  .btn-query {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+}

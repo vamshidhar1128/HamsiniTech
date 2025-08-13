@@ -1,0 +1,245 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .glass-container {
+      min-height: 100vh;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 1300px;
+      margin: auto;
+    }
+
+   header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #00cfff;
+    }
+
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #1e90ff, #00c9a7);
+      
+      -webkit-text-fill-color: transparent;
+    }
+
+    .top-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      margin-bottom: 10px; /* reduced space */
+    }
+
+    .top-flex img {
+      flex: 1;
+      max-width: 50%;
+      border-radius: 10px;
+      width: 80%;
+    }
+
+    .top-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .top-content h3 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .top-content p,
+    .full-width p,
+    .top-content li,
+    .full-width li {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .full-width {
+      margin-top: 0; /* removed extra gap */
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0156ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 25px;
+    }
+
+    .btn:hover {
+      background-color: #003bb3;
+    }
+
+    @media (max-width: 768px) {
+      .top-flex {
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+/* Glassmorphism Styles - Fixed Height */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    overflow: auto; /* Enable scrolling if needed */
+  }
+  
+  .modal-content {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 5% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    color: white;
+    min-height: fit-content; /* Adjust height to content */
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .select-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .select-group select {
+    flex: 1;
+  }
+  
+  .modal-content input,
+  .modal-content select,
+  .modal-content textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(47, 177, 210);
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .modal-content textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .modal-content input::placeholder,
+  .modal-content textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .modal-content button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .modal-content button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  
+  .close:hover {
+    color: #d31d1d;
+  }
+
+ .enquiry-button {
+  background: linear-gradient(to right, #f43b47, #453a94); /* pink to purple */
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.enquiry-button:hover {
+  background: linear-gradient(to right, #453a94, #f43b47); /* reverse gradient */
+}

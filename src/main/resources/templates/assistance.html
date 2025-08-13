@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <title> Job Assistance</title>
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="/assistance.css">
+    </head>
+    <body>
+   <div class="glass-container">
+   <!-- Header -->
+  <header>
+    <div><strong>Hamsini Tech Solutions</strong></div>
+    <div>
+      <a href="/">Home</a>
+      <a href="/blogs">Blogs</a>
+      <a href="/newBatches">New Batches</a>
+      <a href="/hire">Hire From Us</a>
+    </div>
+  </header>
+
+  <div class="header-image">
+    <img src="/assist.png" alt="Banner Image"/>
+  </div>
+
+  <h2>Job Placement Assistance Program</h2>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('courses')">Courses</div>
+    <div class="tab" onclick="showTab('features')">Training Features</div>
+    <div class="tab" onclick="showTab('timetable')">Batch Time Table</div>
+  </div>
+
+  <!-- Courses Tab -->
+  <div id="courses" class="tab-content active">
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="/java.png" alt="Java Course" />
+        <div class="info">
+          <h3>Full Stack Java Placement Assistance Program</h3>
+          <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
+        </div>
+        <div class="card-footer">
+          <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Java Full Stack')">ENROLL</a>
+          <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="/aws.png" alt="AWS Course" />
+        <div class="info">
+          <h3>AWS and DevOps Placement Assistance Program</h3>
+          <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
+        </div>
+        <div class="card-footer">
+          <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Aws and Devops')">ENROLL</a>
+          <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
+        </div>
+      </div>
+
+      <div class="extra-courses">
+        <div class="course-card">
+          <img src="/das.jpeg" alt="Data Science Course" />
+          <div class="info">
+            <h3>Data Science Placement Assistance Program</h3>
+            <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
+          </div>
+          <div class="card-footer">
+            <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Data Science')">ENROLL</a>
+            <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="/python.png" alt="Python Course" />
+          <div class="info">
+            <h3>Full Stack Python Placement Assistance Program</h3>
+            <div class="stars">⭐⭐⭐⭐⭐ <span class="rating">5</span></div>
+          </div>
+          <div class="card-footer">
+            <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Python Full Stack')">ENROLL</a>
+            <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="explore-btn" onclick="showAllCourses()">EXPLORE OUR COURSES</a>
+  </div>
+
+  <!-- Share Modal -->
+<div id="shareModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeShareModal()">&times;</span>
+    <div class="share-box">
+      <h2>Share this course</h2>
+      <p>Share this course's details with your family & friends</p>
+
+      <div class="share-link">
+        <input type="text" value="https://hamsini.com/courses/full-stack-java-online-training" readonly id="shareUrl">
+        <button class="copy-btn" onclick="copyLink()">Copy Link</button>
+      </div>
+
+      <div class="social-icons">
+        <i class="fa-brands fa-square-facebook" onclick="openShare('facebook')" style="color: blue;"></i>
+        <i class="fa-brands fa-instagram" onclick="openShare('instagram')" style="color: red;"></i>
+        <i class="fa-brands fa-square-whatsapp" onclick="openShare('whatsapp')" style="color: green;"></i>
+        <i class="fa-brands fa-linkedin" onclick="openShare('linkedin')" style="color: blue;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Enroll Modal -->
+<div id="enrollModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEnrollModal()">&times;</span>
+    <div class="enroll-form">
+      <h2>Course :</h2>
+      <h1 id="courseName">Course Name</h1>
+
+      <!-- 🟢 Add IDs here -->
+      <input type="text" id="enrollName" placeholder="Full Name" required>
+      <input type="number" id="enrollMobile" placeholder="Mobile Number" required>
+      <input type="email" id="enrollEmail" placeholder="Email address" required>
+
+      <div class="buttons">
+        
+        <button class="submit-btn" onclick="submitEnrollForm()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Tab -->
+  <div id="features" class="tab-content">
+    <h2>Training Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="training.jpeg" alt="Training Image">
+        <h3>Comprehensive Software Training</h3>
+        <p>Dive into a well-structured curriculum covering essential topics relevant to the certification, ensuring a thorough understanding of the subject ma...</p>
+      </div>
+      <div class="feature-card">
+        <img src="trainer.jpeg" alt="Expert Trainers">
+        <h3>Expert Instructors</h3>
+        <p>Learn from industry experts and certified professionals who bring real-world insights, practical experience, and strategies to the training...</p>
+      </div>
+      <div class="feature-card">
+        <img src="projects.jpeg" alt="Hands-on Projects">
+        <h3>Practical Hands-On Projects</h3>
+        <p>Reinforce theoretical knowledge with hands-on labs and projects, providing practical experience crucial for both certification exams and real-world...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time Table Tab -->
+  <div id="timetable" class="tab-content">
+    <h2>New Batch Timetable</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Faculty</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Mode of Training</th>
+          <th>Batch Type</th>
+          <th>Meeting Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Course Name">Full Stack Java Placement</td>
+          <td data-label="Faculty">Real-Time Expert</td>
+          <td data-label="Date">Aug 22</td>
+          <td data-label="Time">11:00 AM</td>
+          <td data-label="Mode of Training">Classroom</td>
+          <td data-label="Batch Type">weekday</td>
+          <td data-label="Meeting Link"><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+        <tr>
+          <td>AWS + DevOps</td>
+          <td>Real-Time Expert</td>
+          <td>Aug 14</td>
+          <td>12:00PM</td>
+          <td>Offline</td>
+          <td>Weekday</td>
+          <td><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+
+        <tr>
+          <td>Azure + DevOps</td>
+          <td>Real-Time Expert</td>
+          <td>Aug 20</td>
+          <td>11:00 AM</td>
+          <td>Online</td>
+          <td>Weekend</td>
+          <td><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+        <tr>
+          <td>Data Analytics</td>
+          <td>Real-Time Expert</td>
+          <td>Aug 22</td>
+          <td>12:00 PM</td>
+          <td>Offline</td>
+          <td>Weekday</td>
+          <td><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+        <tr>
+          <td>Data Science</td>
+          <td>Real-Time Expert</td>
+          <td>Aug 25</td>
+          <td>9:00 AM</td>
+          <td>Online</td>
+          <td>Weekday</td>
+          <td><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+        <tr>
+          <td>Power BI</td>
+          <td>Real-Time Expert</td>
+          <td>Aud 24</td>
+          <td>9:30 AM</td>
+          <td>Online</td>
+          <td>Weekend</td>
+          <td><a class="meeting-link" onclick="openForm()">Click here</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h3>Register for the Batch</h3>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="number" placeholder="Mobile Number" required>
+        <button class="submit-btn" onclick="submitEnrollForm()">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/assistance.js"></script>
+  </body>
+</html>

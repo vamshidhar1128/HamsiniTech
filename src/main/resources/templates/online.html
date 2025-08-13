@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Online Training</title>
+        <link rel="stylesheet" href="/online.css">
+    </head>
+    <body>
+   <div class="glass-container">
+   <!-- Header -->
+  <header>
+    <div><strong>Hamsini Tech Solutions</strong></div>
+    <div>
+      <a href="/">Home</a>
+      <a href="/blogs">Blogs</a>
+      <a href="/newBatches">New Batches</a>
+      <a href="/hire">Hire From Us</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Online Training</h1>
+
+     <!--FLEX SECTION -->
+    <div class="top-flex">
+      <img src="/online.png" alt="Classroom Training" />
+      <div class="top-content">
+        <h3><b>Explore Online Learning: It's just one click away.</b></h3>
+        <p>
+          Create a straightforward online training plan that matches the needs of the IT industry. This uncomplicated yet thorough online course curriculum includes important tech skills, making sure learners have what they need to succeed. Learn IT courses at your own speed with easy access to course materials. Practice what you learn in real-life situations through hands-on projects, Labs, and coding exercises, strengthening your understanding of the skills.
+        </p>
+
+        <p><b>Personalized Learning:</b></p>
+        <li>Tailor your learning experience to align with your preferred style, engaging with content at your own speed. Focus more on challenging topics and progress swiftly through familiar ones.
+      </li>
+      <p><li><b>Affordable and Accessible Education: </b></li></p>
+      </div>
+    </div>
+
+    <!-- REMAINING CONTENT FULL WIDTH -->
+    <div class="full-width">
+      <p><li>Access reasonably priced online courses and resources, bringing quality education to a broader learner's perspective and making it more reachable for everyone.</li></p>
+
+      <p><b>Course Resources:</b></p>
+      <li>Explore a wealth of multimedia resources, including videos and interactive simulations, to enhance your learning experience with diverse content.</li>
+
+      <p><b>Tech Skills Development:</b></p>
+      <li>Develop valuable tech skills through our online training programmes, staying relevant in today's rapidly evolving technological landscape.</li>
+
+      <p><b>Real-World Projects:</b></p>
+      <li>Offer real-world projects that simulate industry scenarios, providing learners with the opportunity to apply their skills in practical situations.</li>
+
+      <!-- Enquiry Button -->
+      <button class="enquiry-button" onclick="openEnquiryModal()">Enquiry</button>
+    </div>
+  </div>
+      <!-- Enquiry Modal with Glassmorphism Effect -->
+<div id="enquiryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEnquiryModal()">&times;</span>
+    <h2>Enquiry</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="text" placeholder="Mobile Number" required />
+      <input type="email" placeholder="Email address" required />
+      
+      <div style="display: flex; gap: 10px;">
+        <select required>
+          <option>Select Course</option>
+          <option>Full Stack Java</option>
+          <option>Aws and Devops</option>
+          <option>Azure Devops</option>
+          <option>Python Full Stack</option>
+          <option>Python</option>
+          <option>Data Science</option>
+          <option>Data Analytics</option>
+          <option>Tableau</option>
+          <option>Power Bi</option>
+          <option>Linux</option>
+        </select>
+
+        <select required>
+          <option>Mode of Training</option>
+          <option>Online</option>
+          <option>Classroom</option>
+        </select>
+      </div>
+
+      <textarea placeholder="Describe message here"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<script src="/online.js"></script>
+</body>
+</html>
