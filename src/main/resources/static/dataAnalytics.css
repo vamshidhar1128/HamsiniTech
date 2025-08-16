@@ -119,22 +119,23 @@
     }
 
     .btn-primary {
-      background: #0984e3;
+      background: rgba(9, 84, 214, 0.25);
       color: #fff;
     }
 
     .btn-primary:hover {
-      background: #74b9ff;
+      background: rgba(35, 201, 231, 0.4);
     }
 
     .btn-outline {
       border: 1px solid #ccc;
-      background: #0984e3;
+      background: rgba(9, 84, 214, 0.25);
       color: #fff;
     }
 
     .btn-outline:hover {
-      background: #74b9ff;
+      background: rgba(35, 201, 231, 0.4);
+      color: #000;
     }
 
     .btn-icon {

@@ -41,15 +41,17 @@
         return;
     }
 
-    // ✅ NEW: Send data to Spring Boot backend
+    // ✅ Send data to Spring Boot backend (same server)
     const data = {
         fullName: name,
         mobile: mobile,
         email: email,
-        course: course
+        course: course,
+        batch: batch
+        
     };
 
-    fetch("https://www.hamsinitechsolutions.com/api/enroll", {
+    fetch("/api/enroll", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

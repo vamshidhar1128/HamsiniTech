@@ -88,6 +88,10 @@ public class HomeController {
     public String reactPage() {
         return "react"; // loads templates/react.html
     }
+    @GetMapping("/python")
+    public String pythonPage() {
+        return "python"; // loads templates/python.html
+    }
 
 
 }

@@ -32,104 +32,240 @@
   <!-- Courses Tab -->
   <div id="courses" class="tab-content active">
     <div class="course-grid">
-      <div class="course-card">
-        <img src="/java.png" alt="Java Course" />
-        <div class="info">
-          <h3>Full Stack Java Placement Assistance Program</h3>
-          <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
-        </div>
-        <div class="card-footer">
-          <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Java Full Stack')">ENROLL</a>
-          <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
-        </div>
-      </div>
+      <!-- Java Full Stack -->
+                <div class="course-card" onclick="openCoursePage(event, '/java')">
+                    
+                    <div class="course-badge">New</div>
+                    <div class="course-image-container">
+                        <img src="/java.jpg" alt="Java Full Stack" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Java Full Stack</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr.Uday</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 12 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Java Full Stack')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="course-card">
-        <img src="/aws.png" alt="AWS Course" />
-        <div class="info">
-          <h3>AWS and DevOps Placement Assistance Program</h3>
-          <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
-        </div>
-        <div class="card-footer">
-          <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Aws and Devops')">ENROLL</a>
-          <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
-        </div>
-      </div>
+      <!-- AWS & DevOps -->
+                <div class="course-card" onclick="openCoursePage(event, '/awsDevops')">
+                    <div class="course-badge">Popular</div>
+                    <div class="course-image-container">
+                        <img src="/devop.jpeg" alt="AWS & DevOps" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">AWS & DevOps</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Manikanta</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 10 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('AWS & DevOps')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
       <div class="extra-courses">
-        <div class="course-card">
-          <img src="/das.jpeg" alt="Data Science Course" />
-          <div class="info">
-            <h3>Data Science Placement Assistance Program</h3>
-            <div class="stars">⭐⭐⭐⭐⭑ <span class="rating">4.5</span></div>
-          </div>
-          <div class="card-footer">
-            <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Data Science')">ENROLL</a>
-            <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
-          </div>
-        </div>
+        <!-- Data Science -->
+                <div class="course-card" onclick="openCoursePage(event, '/dataScience')">
+                    
+                    <div class="course-badge">Advanced</div>
+                    <div class="course-image-container">
+                        <img src="/DS.jpeg" alt="Data Science" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Science</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Rahul</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 15 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Data Science')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="course-card">
-          <img src="/python.png" alt="Python Course" />
-          <div class="info">
-            <h3>Full Stack Python Placement Assistance Program</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="rating">5</span></div>
-          </div>
-          <div class="card-footer">
-            <a href="javascript:void(0);" class="enroll-btn" onclick="openEnrollModal('Python Full Stack')">ENROLL</a>
-            <a href="javascript:void(0);" class="share-btn" onclick="openShareModal()">🔗 SHARE</a>
-          </div>
-        </div>
+           <!-- Python Full Stack -->
+                <div class="course-card" onclick="openCoursePage(event, '/python')">
+                    
+                    <div class="course-badge">Advanced</div>
+                    <div class="course-image-container">
+                        <img src="/python.png" alt="Data Science" class="course-image">
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Python Full Stack</h3>
+                        <div class="course-instructor">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Mr. Ravi</span>
+                        </div>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="course-date">
+                                <i class="far fa-calendar-alt"></i> 15 Jul 2025
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openShareModal()">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Data Science')">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
       </div>
     </div>
     <a href="javascript:void(0);" class="explore-btn" onclick="showAllCourses()">EXPLORE OUR COURSES</a>
   </div>
 
-  <!-- Share Modal -->
-<div id="shareModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeShareModal()">&times;</span>
-    <div class="share-box">
-      <h2>Share this course</h2>
-      <p>Share this course's details with your family & friends</p>
-
-      <div class="share-link">
-        <input type="text" value="https://hamsini.com/courses/full-stack-java-online-training" readonly id="shareUrl">
-        <button class="copy-btn" onclick="copyLink()">Copy Link</button>
-      </div>
-
-      <div class="social-icons">
-        <i class="fa-brands fa-square-facebook" onclick="openShare('facebook')" style="color: blue;"></i>
-        <i class="fa-brands fa-instagram" onclick="openShare('instagram')" style="color: red;"></i>
-        <i class="fa-brands fa-square-whatsapp" onclick="openShare('whatsapp')" style="color: green;"></i>
-        <i class="fa-brands fa-linkedin" onclick="openShare('linkedin')" style="color: blue;"></i>
-      </div>
+  <!-- Enroll Modal -->
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Enroll Now</h3>
+                <span class="modal-close" onclick="closeEnrollModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Course</label>
+                    <input type="text" id="courseName" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" id="enrollName" class="form-control" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Mobile Number</label>
+                    <input type="number" id="enrollMobile" class="form-control" placeholder="Enter your mobile number">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="enrollEmail" class="form-control" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Batch</label>
+                    <select class="form-control">
+                        <option>Morning (9AM - 12PM)</option>
+                        <option>Afternoon (2PM - 5PM)</option>
+                        <option>Evening (6PM - 9PM)</option>
+                        <option>Weekend (Sat & Sun)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeEnrollModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="submitEnrollForm()">Submit Application</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
-<!-- Enroll Modal -->
-<div id="enrollModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeEnrollModal()">&times;</span>
-    <div class="enroll-form">
-      <h2>Course :</h2>
-      <h1 id="courseName">Course Name</h1>
-
-      <!-- 🟢 Add IDs here -->
-      <input type="text" id="enrollName" placeholder="Full Name" required>
-      <input type="number" id="enrollMobile" placeholder="Mobile Number" required>
-      <input type="email" id="enrollEmail" placeholder="Email address" required>
-
-      <div class="buttons">
-        
-        <button class="submit-btn" onclick="submitEnrollForm()">Submit</button>
-      </div>
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Share This Course</h3>
+                <span class="modal-close" onclick="closeShareModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Share Link</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" id="shareUrl" class="form-control" value="https://hamsini.com/courses" readonly>
+                        <button class="btn btn-primary" onclick="copyLink()">Copy</button>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <p style="text-align: center; margin-bottom: 1rem; color: var(--gray-700);">Or share via</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem;">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1DnsTNzDye/" class="social-link facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="social-link twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hamsinitechsolutions?igsh=NHc5dW00ZjBnYnpm" class="social-link instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/hamsini-tech-solutions-963bbb378/" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <button class="social-link whatsapp" onclick="openShare('whatsapp')">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
+    
 <!-- Features Tab -->
   <div id="features" class="tab-content">
     <h2>Training Features</h2>
@@ -229,18 +365,30 @@
   </div>
 
   <!-- Modal -->
-  <div id="formModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeForm()">&times;</span>
-      <h3>Register for the Batch</h3>
-      <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="number" placeholder="Mobile Number" required>
-        <button class="submit-btn" onclick="submitEnrollForm()">Submit</button>
-      </form>
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">Register for the Batch</h3>
+      <span class="modal-close" onclick="closeForm()">&times;</span>
     </div>
+    <form>
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mobile Number</label>
+        <input type="number" class="form-control" placeholder="Mobile Number" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
+</div>
+
 
   <script src="/assistance.js"></script>
   </body>

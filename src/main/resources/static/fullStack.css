@@ -375,27 +375,25 @@
 
 /* Primary Button */
 .btn-primary {
-  background-color: var(--primary);
-  color: white;
-  border: 1px solid var(--primary-dark);
-}
+      background: rgba(9, 84, 214, 0.25);
+      color: #fff;
+    }
 
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-}
+    .btn-primary:hover {
+      background: rgba(35, 201, 231, 0.4);
+    }
 
-/* Outline Button */
-.btn-outline {
-  background-color: blue;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-}
+    .btn-outline {
+      border: 1px solid #ccc;
+      background: rgba(9, 84, 214, 0.25);
+      color: #fff;
+    }
 
-.btn-outline:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
+    .btn-outline:hover {
+      background: rgba(35, 201, 231, 0.4);
+      color: #000;
+    }
+    
 /* Icon Button */
 .btn-icon {
   border: none;

@@ -1,95 +1,155 @@
-/*share Modal script*/
- 
-  function openShareModal() {
-    document.getElementById("shareModal").style.display = "block";
-  }
+// WhatsApp Functions
+        function openWhatsApp() {
+            const phoneNumber = "+91 949455742";
+            const message = "Hello Hamsini Tech, I'm interested in your courses. Can you please provide more information?";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+        function openCoursePage(event, url) {
+             if (!event.target.closest("button")) {
+             window.location.href = url;
+            }
+        }
 
-  function closeShareModal() {
-    document.getElementById("shareModal").style.display = "none";
-  }
+        // Modal Functions
+        function openEnrollModal(courseTitle) {
+            document.getElementById('courseName').value = courseTitle;
+            document.getElementById('enrollModal').style.display = 'flex';
+        }
 
-  function copyLink() {
-    const linkInput = document.getElementById("shareUrl");
-    linkInput.select();
-    linkInput.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("Link copied!");
-  }
+        function closeEnrollModal() {
+            document.getElementById('enrollModal').style.display = 'none';
+        }
 
-  function openShare(platform) {
-    const url = encodeURIComponent(document.getElementById("shareUrl").value);
-    let shareUrl = "#";
+        function openShareModal() {
+            document.getElementById('shareModal').style.display = 'flex';
+        }
 
-    switch(platform) {
-      case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-        break;
-      case 'instagram':
-        alert("Instagram does not support direct web sharing.");
+        function closeShareModal() {
+            document.getElementById('shareModal').style.display = 'none';
+        }
+
+    function submitEnrollForm() {
+    const name = document.getElementById('enrollName').value.trim();
+    const mobile = document.getElementById('enrollMobile').value.trim();
+    const email = document.getElementById('enrollEmail').value.trim();
+    const course = document.getElementById('courseName').value;
+
+    if (!name || !mobile || !email) {
+        alert('Please fill in all required fields.');
         return;
-      case 'whatsapp':
-        shareUrl = `https://wa.me/?text=${url}`;
-        break;
-      case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-        break;
     }
 
-    window.open(shareUrl, "_blank");
+    // ✅ Send data to Spring Boot backend (same server)
+    const data = {
+        fullName: name,
+        mobile: mobile,
+        email: email,
+        course: course,
+        batch: batch
+    };
+
+    fetch("/api/enroll", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.text())
+    .then(response => {
+        console.log("Server Response:", response);
+    })
+    .catch(error => {
+        console.error("Error sending to backend:", error);
+    });
+
+    // ✅ Your existing WhatsApp message logic
+    const whatsappMessage = `New Enrollment Request:\n\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nCourse: ${course}`;
+    const whatsappUrl = `https://wa.me/919494557422?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
+    alert(`Thank you for your interest!\n\nWe've received your application for ${course}. Our counselor will contact you shortly at ${mobile}.`);
+    closeEnrollModal();
+
+    // Reset form
+    document.getElementById('enrollName').value = '';
+    document.getElementById('enrollMobile').value = '';
+    document.getElementById('enrollEmail').value = '';
   }
 
-  // Close modal if clicking outside it
-  window.onclick = function(event) {
-    const modal = document.getElementById("shareModal");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+        function copyLink() {
+            const linkInput = document.getElementById('shareUrl');
+            linkInput.select();
+            linkInput.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+
+            // Show copied notification
+            const originalText = linkInput.nextElementSibling.textContent;
+            linkInput.nextElementSibling.innerHTML = '<i class="fas fa-check"></i> Copied!';
+
+            setTimeout(() => {
+                linkInput.nextElementSibling.textContent = originalText;
+            }, 2000);
+        }
+
+        function openShare(platform) {
+            const url = encodeURIComponent(document.getElementById('shareUrl').value);
+            let shareUrl = '';
+            let windowSize = 'width=600,height=400';
+
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/profile.php?id=61578204434186/`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=Check out this course from Hamsini Tech Solutions`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                    break;
+                case 'whatsapp':
+                    const whatsappMessage = `Check out this course from Hamsini Tech Solutions: ${url}`;
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+                    windowSize = '';
+                    break;
+                case 'instagram':
+                    // Instagram doesn't have direct sharing, so we'll open their profile
+                    shareUrl = 'https://www.instagram.com/hamsinitech2025/';
+                    windowSize = '';
+                    break;
+            }
+
+            window.open(shareUrl, '_blank', windowSize);
+        }
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('enrollModal')) {
+                closeEnrollModal();
+            }
+            if (event.target === document.getElementById('shareModal')) {
+                closeShareModal();
+            }
+        });
+
+        // Search functionality
+        document.querySelector('.search-box input')?.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const courseCards = document.querySelectorAll('.course-card');
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('.course-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
 
 
-
- 
-
-/* Enroll Modal script*/
-
-  function openEnrollModal(courseTitle) {
-    document.getElementById("courseName").textContent = courseTitle;
-    document.getElementById("enrollModal").style.display = "block";
-  }
-
-  function closeEnrollModal() {
-    document.getElementById("enrollModal").style.display = "none";
-  }
-
-  function submitEnrollForm() {
-    const name = document.getElementById("enrollName").value.trim();
-    const mobile = document.getElementById("enrollMobile").value.trim();
-    const email = document.getElementById("enrollEmail").value.trim();
-    const course = document.getElementById("courseName").textContent;
-
-    if (name === "" || mobile === "" || email === "") {
-      alert("Please fill in all fields.");
-    } else {
-      alert(
-        "Enrollment submitted successfully!\n\n" +
-        "Course: " + course + "\n" +
-        "Name: " + name + "\n" +
-        "Mobile: " + mobile + "\n" +
-        "Email: " + email
-      );
-      closeEnrollModal();
-    }
-  }
-
-  // Close modal if clicking outside
-  window.addEventListener("click", function(event) {
-    const enrollModal = document.getElementById("enrollModal");
-    if (event.target === enrollModal) {
-      enrollModal.style.display = "none";
-    }
-  });
-
-  function showTab(tabId) {
+    function showTab(tabId) {
       document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
       document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
@@ -104,26 +164,16 @@
     function openForm() {
       document.getElementById("formModal").style.display = "block";
     }
+    function openForm() {
+  document.getElementById("formModal").style.display = "flex";
+}
+
 
     function closeForm() {
       document.getElementById("formModal").style.display = "none";
     }
+    
 
-    window.onclick = function(event) {
-      const modal = document.getElementById("formModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-    function submitEnrollForm() {
-    var name = document.getElementById("enrollName").value.trim();
-    var mobile = document.getElementById("enrollMobile").value.trim();
-    var email = document.getElementById("enrollEmail").value.trim();
-
-    if (name === "" || mobile === "" || email === "") {
-      alert("Please fill in all fields.");
-    } else {
-      alert("Enrollment submitted successfully!\nName: " + name + "\nMobile: " + mobile + "\nEmail: " + email);
-      closeEnrollModal();
-    }
-  }
+    
+    
+    

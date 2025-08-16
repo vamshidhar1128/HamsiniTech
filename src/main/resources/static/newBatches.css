@@ -190,12 +190,18 @@
     .modal-content button {
       width: 100%;
       padding: 10px;
-      background: #0156ff;
+      background: rgba(9, 84, 214, 0.25);
       color: white;
       border: none;
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
+    }
+
+    .modal-content button:hover {
+      background: rgba(35, 201, 231, 0.4);
+      color: #000;
+
     }
 
     .close {
