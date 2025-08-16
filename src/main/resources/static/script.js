@@ -35,6 +35,7 @@
     const mobile = document.getElementById('enrollMobile').value.trim();
     const email = document.getElementById('enrollEmail').value.trim();
     const course = document.getElementById('courseName').value;
+    const batch = document.getElementById('enrollBatch').value;
 
     if (!name || !mobile || !email) {
         alert('Please fill in all required fields.');
@@ -47,7 +48,8 @@
         mobile: mobile,
         email: email,
         course: course,
-        batch: batch
+        batch : batch
+        
         
     };
 
